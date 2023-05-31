@@ -4,9 +4,9 @@ if exists("b:current_syntax")
 endif
 
 
-syn region task start="\s*[-✔]" end="$" contains=@Spell
-syn region comment start="\s*|" end="$" contains=@Spell
-syn region header start="\s*#" end="$" contains=@Spell
+syn region task start="^\s*[-✔]" end="$" contains=@Spell
+syn region comment start="^\s*|" end="$" contains=@Spell
+syn region header start="^\s*#" end="$" contains=@Spell
 
 hi def link task        Label
 hi def link comment     Comment
