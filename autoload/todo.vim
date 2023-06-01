@@ -9,3 +9,11 @@ function! todo#ToggleTask() abort
          call setline(l:current_lineno, substitute(l:current_line, '^\(\s*\)✔', '\1-', ''))
     endif
 endfunction
+
+function! todo#NextUncompletedTask() abort
+    call search('^\s*-')
+endfunction
+
+function! todo#PreviousUncompletedTask() abort
+    call search('^\s*-', 'b')
+endfunction
